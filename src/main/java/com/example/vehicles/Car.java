@@ -2,7 +2,7 @@ package com.example.vehicles;
 
 import java.util.Date;
 
-public class Car extends Vehicle {
+public class Car extends Vehicle implements Movement, Business {
 	
 	public String carMake;
 	public Date carYear;
@@ -16,12 +16,19 @@ public class Car extends Vehicle {
 	
 	// METHODS
 	
-	public void doDrive() {
-		System.out.println(this.carMake + " started driving");
+	// mandatory from movement interface 
+	public String doDrive() {
+		return this.carMake + " started driving";
 	}
 	
-	public void doBrake() {
-		System.out.println(this.carMake + " started braking");
+	// mandatory from movement interface
+	public String doBrake() {
+		return this.carMake + " started braking";
+	}
+	
+	// mandatory from business interface
+	public String sellCar() {
+		return "You sold your " + this.carYear + " " + this.carMake;
 	}
 	
 	public void doRefill() {
@@ -43,4 +50,7 @@ public class Car extends Vehicle {
 	public void showType() {
 		System.out.println("Car Type: " + vehicleType + " Make: " + carMake + " Year: " + carYear);
 	}
+	
+	
+	
 }

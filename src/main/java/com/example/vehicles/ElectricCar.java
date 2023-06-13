@@ -2,12 +2,12 @@ package com.example.vehicles;
 
 import java.util.Date;
 
-public class ElectricCar extends Car {
+public class ElectricCar extends Car implements Movement, Business{
 	
-	public String electricRange;
+	public int electricRange;
 	
 	// CONSTRUCTOR
-	public ElectricCar(String vehicleType, String carMake, Date carYear, String electricRange) {
+	public ElectricCar(String vehicleType, String carMake, Date carYear, int electricRange) {
 		super(vehicleType, carMake, carYear);
 		this.electricRange = electricRange;
 	}
@@ -15,6 +15,21 @@ public class ElectricCar extends Car {
 	// METHODS
 	public void autoDrive() {
 		System.out.println(this.carYear + " " + this.carMake + " automaticaly drives using AI");
+	}
+	
+	// mandatory from movement interface 
+	public String doDrive() {
+		return this.carMake + " started driving";
+	}
+	
+	// mandatory from movement interface
+	public String doBrake() {
+		return this.carMake + " started braking";
+	}
+	
+	// mandatory from business interface
+	public String sellCar() {
+		return "You sold your electric " + this.carYear + " " + this.carMake;
 	}
 	
 	// OVERRIDEN METHODS FROM FATHER CLASSES
