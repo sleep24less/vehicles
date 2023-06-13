@@ -1,6 +1,6 @@
 package com.example.vehicles;
 
-import java.util.Date;
+import java.time.Year;
 
 public interface Movement {
 	
@@ -8,7 +8,7 @@ public interface Movement {
 	
 	public String doBrake();
 	
-	public default void doCrash(String carMake, Date carYear) {
+	public default void doCrash(String carMake, Year carYear) {
 		System.out.println(carYear + " " + carMake + " crashed!");
 	};
 	

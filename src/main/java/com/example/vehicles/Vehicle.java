@@ -20,11 +20,11 @@ public abstract class Vehicle {
 	
 	// METHODS
 	public void getVehiclePrice(String vehicleType) {
-			if (vehicleType == "Truck") {
+			if (vehicleType == "TRUCK") {
 				System.out.println("Price of " + this.vehicleType + " is more than 80k");
-			} else if (vehicleType == "Car") {
+			} else if (vehicleType == "CAR") {
 				System.out.println("Price of " + this.vehicleType + " is around 40k");
-			} else if (vehicleType == "Bike") {
+			} else if (vehicleType == "BIKE") {
 				System.out.println("You are broke, but atleast you're helping the climate!");
 			}
 	}

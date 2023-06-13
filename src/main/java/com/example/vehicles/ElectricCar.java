@@ -1,13 +1,13 @@
 package com.example.vehicles;
 
-import java.util.Date;
+import java.time.Year;
 
 public class ElectricCar extends Car implements Movement, Business{
 	
 	public int electricRange;
 	
 	// CONSTRUCTOR
-	public ElectricCar(String vehicleType, String carMake, Date carYear, int electricRange) {
+	public ElectricCar(String vehicleType, String carMake, Year carYear, int electricRange) {
 		super(vehicleType, carMake, carYear);
 		this.electricRange = electricRange;
 	}
