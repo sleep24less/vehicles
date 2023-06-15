@@ -4,8 +4,8 @@ import java.time.Year;
 
 public class Car extends Vehicle implements Movement, Business {
 	
-	public String carMake;
-	public Year carYear;
+	private String carMake;
+	private Year carYear;
 	
 	// CONSTRUCTOR
 	public Car(String vehicleType, String carMake, Year carYear) {

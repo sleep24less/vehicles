@@ -2,7 +2,7 @@ package com.example.vehicles;
 
 public abstract class Vehicle {
 	
-	public String vehicleType;
+	private String vehicleType;
 	
 	// CONSTRUCTOR
 	public Vehicle(String vehicleType) {

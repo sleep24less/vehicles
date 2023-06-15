@@ -4,7 +4,7 @@ import java.time.Year;
 
 public class ElectricCar extends Car implements Movement, Business{
 	
-	public int electricRange;
+	private int electricRange;
 	
 	// CONSTRUCTOR
 	public ElectricCar(String vehicleType, String carMake, Year carYear, int electricRange) {
